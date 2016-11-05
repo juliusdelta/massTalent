@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MassTalent</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header class="navbar navbar-fixed-top">
+      <div class="container">
+          <%= link_to "massTalent", '/', id: "logo" %>
+          <nav>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><%= link_to "About",   '/about' %></li>
+                  <li><%= link_to "Candidate",   '/candidates/sign_in' %></li>
+                  <li><%= link_to "Company", '/companies/sign_in' %></li>
+                  <li><%= link_to "Pricing", '/pricing' %></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
